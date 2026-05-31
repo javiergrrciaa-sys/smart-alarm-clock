@@ -1,0 +1,137 @@
+# Especificación de Casos de Uso - Smart Alarm Clock
+
+---
+
+## CU1 - Crear alarma
+
+### Objetivo
+Permitir al usuario crear una nueva alarma en el sistema.
+
+### Actor principal
+Usuario
+
+### Precondiciones
+El sistema debe estar inicializado.
+
+### Flujo principal
+1. El usuario solicita crear una alarma.
+2. Introduce hora y minutos.
+3. Introduce etiqueta.
+4. Configura repetición semanal.
+5. El sistema guarda la alarma.
+
+### Flujos alternativos
+- Si la alarma ya existe, el sistema no la crea.
+
+### Postcondiciones
+La alarma queda registrada en el sistema.
+
+### Reglas de negocio
+- No se permiten alarmas duplicadas exactas.
+
+---
+
+## CU2 - Eliminar alarma
+
+### Objetivo
+Eliminar una alarma existente.
+
+### Actor principal
+Usuario
+
+### Precondiciones
+Debe existir al menos una alarma.
+
+### Flujo principal
+1. Usuario selecciona alarma.
+2. Solicita eliminación.
+3. Sistema elimina alarma.
+
+### Postcondiciones
+La alarma deja de existir en el sistema.
+
+---
+
+## CU3 - Activar/Desactivar alarma
+
+### Objetivo
+Cambiar el estado de una alarma.
+
+### Actor principal
+Usuario
+
+### Flujo principal
+1. Usuario selecciona alarma.
+2. Activa o desactiva.
+3. Sistema actualiza estado.
+
+---
+
+## CU4 - Posponer alarma (Snooze)
+
+### Objetivo
+Retrasar la alarma unos minutos.
+
+### Actor principal
+Usuario
+
+### Flujo principal
+1. La alarma está sonando.
+2. Usuario selecciona "Snooze".
+3. Sistema añade minutos.
+4. La alarma se reprograma.
+
+### Reglas de negocio
+- El tiempo de snooze es configurable.
+
+---
+
+## CU5 - Detener alarma
+
+### Objetivo
+Detener una alarma activa.
+
+### Flujo principal
+1. La alarma suena.
+2. Usuario intenta detenerla.
+3. Sistema solicita reto matemático.
+4. Si se resuelve, se detiene la alarma.
+
+---
+
+## CU6 - Resolver reto matemático
+
+### Objetivo
+Verificar la atención del usuario.
+
+### Flujo principal
+1. Sistema genera operación.
+2. Usuario responde.
+3. Sistema valida respuesta.
+
+### Postcondiciones
+- Si es correcta: alarma se detiene.
+- Si es incorrecta: continúa sonando.
+
+---
+
+## CU7 - Consultar próximas alarmas
+
+### Objetivo
+Mostrar alarmas activas próximas.
+
+### Flujo principal
+1. Usuario solicita consulta.
+2. Sistema ordena alarmas por hora.
+3. Muestra lista.
+
+---
+
+## CU8 - Repetición semanal
+
+### Objetivo
+Permitir alarmas recurrentes.
+
+### Reglas de negocio
+- Se usa Set<DayOfWeek>.
+- No se permiten días duplicados.
