@@ -1,10 +1,7 @@
-# Diagrama de clases inicial
-
 ```mermaid
 classDiagram
 
 AlarmManager --> Alarm
-Alarm --> SoundProfile
 
 class Alarm{
     UUID id
@@ -15,10 +12,8 @@ class Alarm{
 
 class AlarmManager{
     List alarms
-}
-
-class SoundProfile{
-    String soundName
-    int volume
+    addAlarm()
+    removeAlarm()
+    findById()
 }
 ```
