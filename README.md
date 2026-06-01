@@ -115,3 +115,16 @@ Todo el código ha sido revisado y adaptado manualmente.
 ## 📌 Autor
 
 Proyecto desarrollado como práctica de programación orientada a objetos en Java.
+
+## 📋 Autoevaluación
+
+| Criterio | Peso | Nota (0-10) | Nota ponderada |
+|---|---|---|---|
+| Diseño orientado a objetos | 25% | 9 | 2,25 |
+| Calidad del código | 20% | 9 | 1,80 |
+| Uso correcto de Git/GitHub | 15% | 9 | 1,35 |
+| Diagramas UML | 15% | 9 | 1,35 |
+| Especificación de casos de uso | 10% | 9 | 0,90 |
+| Documentación README | 10% | 9 | 0,90 |
+| Reflexión sobre IA | 5% | 9 | 0,45 |
+| **TOTAL** | **100%** | — | **9,00** |
